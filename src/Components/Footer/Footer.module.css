@@ -1,0 +1,14 @@
+.Footer {
+  width: 100%;
+  background-color: #242333;
+  height: 300px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+.Footer > h1 {
+  font-size: 2.5rem;
+}

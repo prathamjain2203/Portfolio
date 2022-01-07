@@ -1,0 +1,29 @@
+.About {
+  color: #242333;
+  width: 50%;
+  margin: auto;
+  opacity: 0;
+  padding-top: 150px;
+  transition: opacity 700ms ease-in;
+  text-align: center;
+}
+
+.AboutInView {
+  opacity: 1;
+}
+.Title {
+  font-size: 2.6rem;
+  color: #242333;
+  text-transform: uppercase;
+}
+.AboutDescription {
+  margin: auto;
+  margin-top: 20px;
+  width: 70%;
+  font-weight: 500;
+}
+@media (max-width: 521px) {
+  .About {
+    width: 90%;
+  }
+}

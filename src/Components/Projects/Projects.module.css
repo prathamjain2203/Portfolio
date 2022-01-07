@@ -1,0 +1,32 @@
+.Projects {
+  color: #242333;
+  width: 70%;
+  margin: auto;
+  opacity: 0;
+  padding-top: 150px;
+  transition: opacity 700ms ease-in;
+  text-align: center;
+}
+.ProjectsInView {
+  opacity: 1;
+}
+.Title {
+  font-size: 2.6rem;
+  color: #242333;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.ProjectsList {
+  display: flex;
+  gap: 30px;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 942px) {
+  .Projects {
+    width: 80%;
+  }
+}

@@ -1,0 +1,79 @@
+.Navbar {
+  background-color: #242333;
+  color: #ffffff;
+  height: 10vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 5px 1px #01b0d3;
+  z-index: 1000;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+.Navbarleft {
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding-left: 10px;
+}
+.Navbarritems {
+  display: flex;
+  gap: 30px;
+  padding-right: 10rem;
+}
+.Navbarright > ul {
+  list-style: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.Navbarright > ul > li {
+  cursor: pointer;
+  color: rgb(241, 241, 241);
+}
+.Navbarright > ul > li::after {
+  content: "";
+  display: block;
+  width: 0;
+  margin-top: 1px;
+  height: 2px;
+  border-radius: 50px;
+  background-color: #01b0d3;
+  transition: width 250ms ease-in;
+}
+.Navbarright > ul > li:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 870px) {
+  .Navbarritems {
+    padding-right: 9rem;
+  }
+}
+@media (max-width: 808px) {
+  .Navbarritems {
+    padding-right: 7rem;
+  }
+}
+@media (max-width: 700px) {
+  .Navbarritems {
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width: 657px) {
+  .Navbarritems {
+    padding-right: 4rem;
+  }
+}
+@media (max-width: 600px) {
+  .Navbarritems {
+    padding-right: 0;
+  }
+}
+@media (max-width: 521px) {
+  .Navbar {
+    display: none;
+  }
+}

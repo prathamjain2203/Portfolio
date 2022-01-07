@@ -1,0 +1,32 @@
+.Skills {
+  color: #242333;
+  margin: auto;
+  width: 70%;
+  padding-top: 150px;
+  opacity: 0;
+  transition: opacity 700ms ease-in;
+  text-align: center;
+}
+.SkillsInView {
+  opacity: 1;
+}
+.Title {
+  font-size: 2.6rem;
+  color: #242333;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.SkillsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 5px 0;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 521px) {
+  .Skills {
+    width: 90%;
+  }
+}

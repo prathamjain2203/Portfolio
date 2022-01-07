@@ -1,0 +1,28 @@
+.Project {
+  width: 300px;
+  height: 400px;
+  border-radius: 5px;
+  box-shadow: 0 0 6px 3px rgba(0, 0, 0, 0.109);
+  transition: transform 250ms ease-in;
+  color: black;
+  overflow: hidden;
+}
+.Project:hover {
+  transform: scale(1.05);
+}
+.ProjectDetails {
+  text-align: left;
+  padding: 10px;
+}
+.Project > img {
+  height: 180px;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.ProjectDetails > a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+}

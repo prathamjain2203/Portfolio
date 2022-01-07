@@ -1,0 +1,57 @@
+.Nav {
+  display: none;
+  position: fixed;
+  background-color: #242333;
+  color: #ffffff;
+  top: 0;
+  z-index: 1000;
+  height: auto;
+  width: 100%;
+  left: 0;
+  box-shadow: 0 0 5px 1px #01b0d3;
+}
+
+.Mobilenav {
+  z-index: 1000;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+.DropdownFl {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.DropdownFl > li {
+  cursor: pointer;
+  color: rgb(241, 241, 241);
+}
+
+.DropdownFl > li::after {
+  content: "";
+  display: block;
+  width: 0;
+  margin-top: 1px;
+  height: 2px;
+  border-radius: 50px;
+  background-color: #01b0d3;
+  transition: width 250ms ease-in;
+}
+.DropdownFl > li:hover::after {
+  width: 100%;
+}
+
+.MobilenavLeft {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+@media (max-width: 521px) {
+  .Nav {
+    display: block;
+  }
+}

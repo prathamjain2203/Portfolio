@@ -1,0 +1,48 @@
+.Contact {
+  width: 75%;
+  color: #242333;
+  height: 450px;
+  z-index: 2;
+  border-radius: 20px;
+  box-shadow: 0 0 5px 4px #01b0d3;
+  background-color: white;
+  top: 56%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
+.Close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+.Form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  gap: 20px;
+  margin-top: 10px;
+  width: 70%;
+}
+.Label {
+  font-weight: 600;
+}
+.Input {
+  outline: none;
+  border: 2px solid rgb(214, 214, 214);
+  border-radius: 5px;
+  height: 25px;
+  height: 100px;
+  padding-left: 10px;
+}
+.btn {
+  outline: none;
+  border: none;
+  background-color: #01b0d3;
+  padding: 5px 20px;
+  color: white;
+  cursor: pointer;
+  width: 80%;
+  border-radius: 5px;
+}
