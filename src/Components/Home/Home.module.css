@@ -166,10 +166,10 @@
 }
 
 @media (max-width: 521px) {
-  .Home {
+  /* .Home {
     display: block;
     margin-top: 40px;
-  }
+  } */
   .container {
     display: flex;
     gap: 10px;
