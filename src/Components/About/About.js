@@ -1,5 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
 import classes from "./About.module.css";
+import IgnouLogo from "../../assets/EducationLogo/Ignou.png";
+import LfpsLogo from "../../assets/EducationLogo/Lfps.png";
+
 const classAbout = [classes.About];
 function About() {
   const [view, setView] = useState(false);
@@ -28,7 +31,7 @@ function About() {
         </h1>
         <div className={classes.AboutDescription}>
           <p>
-            Hi, my name is <b>Pratham Jain</b> and I am a{" "}
+            Hi, my name is <b>Pratham Jain</b> and I am a
             <b>frontend developer</b>. I completed my <b>BCA</b> from Indira
             Gandhi National Open University (IGNOU) and completed my 10th & 12th
             from Little Flowers Public Senior Secondary School.
@@ -39,6 +42,50 @@ function About() {
             job half done. Determination is important when you want to get to
             your goal in life, whatever that may be in the short or long-term.
           </p>
+        </div>
+      </div>
+      <div className={classes.Education}>
+        <h1
+          style={{
+            marginBottom: "40px",
+            fontSize: "1.8rem",
+          }}
+        >
+          EDUCATION
+        </h1>
+        <div className={classes.EducationFl}>
+          <div style={{ width: "300px" }}>
+            <img className={classes.EduLogo} src={IgnouLogo} alt="Ignou" />
+            <h2 style={{ fontSize: "1rem", marginTop: "15px" }}>
+              Indira Gandhi National Open University(IGNOU), Delhi
+            </h2>
+            <div style={{ marginTop: "10px", fontWeight: "500" }}>
+              <p>BCA</p>
+              <p> YEAR : 2018</p>
+            </div>
+          </div>
+          <div style={{ width: "300px" }}>
+            <img className={classes.EduLogo} src={LfpsLogo} alt="Ignou" />
+            <h2 style={{ fontSize: "1rem", marginTop: "15px" }}>
+              Little Flowers Sr. Sec. Public School, Delhi
+            </h2>
+            <div style={{ marginTop: "10px", fontWeight: "500" }}>
+              <p>CBSE (Class XII)</p>
+              <p> YEAR : 2017</p>
+              <p> PERCENTAGE : 91%</p>
+            </div>
+          </div>
+          <div style={{ width: "300px" }}>
+            <img className={classes.EduLogo} src={LfpsLogo} alt="Ignou" />
+            <h2 style={{ fontSize: "1rem", marginTop: "15px" }}>
+              Little Flowers Sr. Sec. Public School, Delhi
+            </h2>
+            <div style={{ marginTop: "10px", fontWeight: "500" }}>
+              <p>CBSE (Class X)</p>
+              <p> YEAR : 2015</p>
+              <p> CGPA : 9.8/10</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

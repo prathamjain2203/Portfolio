@@ -14,3 +14,13 @@
 .Skill > img {
   height: 10rem;
 }
+@media (max-width: 888px) {
+  .Skill {
+    width: 260px;
+  }
+}
+@media (max-width: 774px) {
+  .Skill {
+    width: 245px;
+  }
+} ;

@@ -5,6 +5,7 @@ function Navbar() {
     if (e.target.getAttribute("data-section")) {
       let target = e.target.getAttribute("data-section");
       let section = document.getElementById(target);
+
       section.scrollIntoView({ behavior: "smooth" });
     }
   };

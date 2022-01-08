@@ -26,3 +26,9 @@
   font-weight: bold;
   font-size: 0.9rem;
 }
+
+@media (max-width: 825px) {
+  .Project {
+    width: 260px;
+  }
+}
