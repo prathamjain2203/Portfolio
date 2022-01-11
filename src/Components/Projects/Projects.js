@@ -41,6 +41,15 @@ const projectsArr = [
     skills: "Html, Css, Javascript",
     description: "It is a game in which player who scores 30 first will win.",
   },
+  {
+    title: "Weather",
+    github: "https://github.com/prathamjain2203/Weather",
+    live: "https://pratham-weather.netlify.app/",
+    imgSrc: "../../../ProjectsPics/Weather.png",
+    skills: "Html, Css, Javascript, React.js",
+    description:
+      "It is a weather update website which gives weather updates of different cities.",
+  },
 ];
 
 function Projects() {

@@ -3,7 +3,7 @@ import classes from "./Project.module.css";
 function Project(props) {
   return (
     <div className={classes.Project}>
-      <img src={process.env.PUBLIC_URL + props.imgSrc} alt="Netflix Clone" />
+      <img src={process.env.PUBLIC_URL + props.imgSrc} alt={props.title} />
       <div className={classes.ProjectDetails}>
         <h3 style={{ marginBottom: "5px" }}>{props.title}</h3>
         <div

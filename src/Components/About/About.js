@@ -31,7 +31,7 @@ function About() {
         </h1>
         <div className={classes.AboutDescription}>
           <p>
-            Hi, my name is <b>Pratham Jain</b> and I am a
+            Hi, my name is <b>Pratham Jain</b> and I am a{" "}
             <b>frontend developer</b>. I completed my <b>BCA</b> from Indira
             Gandhi National Open University (IGNOU) and completed my 10th & 12th
             from Little Flowers Public Senior Secondary School.
