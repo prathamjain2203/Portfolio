@@ -186,3 +186,8 @@
     padding: 5px 15px;
   }
 }
+@media (max-width: 352px) {
+  .DownloadRes {
+    margin-left: 0;
+  }
+}

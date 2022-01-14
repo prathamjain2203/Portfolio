@@ -2,7 +2,7 @@ import classes from "./Footer.module.css";
 
 function Footer() {
   return (
-    <section className={classes.Footer}>
+    <footer className={classes.Footer}>
       <h1>Stay Connected</h1>
       <div>
         <div
@@ -39,7 +39,7 @@ function Footer() {
           </span>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }
 

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import classes from "./About.module.css";
 import IgnouLogo from "../../assets/EducationLogo/Ignou.png";
 import LfpsLogo from "../../assets/EducationLogo/Lfps.png";
@@ -6,25 +6,46 @@ import LfpsLogo from "../../assets/EducationLogo/Lfps.png";
 const classAbout = [classes.About];
 function About() {
   const [view, setView] = useState(false);
-  const handleScroll = useCallback(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 450) {
-        if (classAbout.length === 1) {
-          classAbout.push(classes.AboutInView);
-          setView(true);
-        }
-      }
-    });
-  }, []);
-  useEffect(() => {
-    handleScroll();
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
+
+  const options = useMemo(() => {
+    return {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.2,
     };
-  }, [handleScroll]);
+  }, []);
+  const aboutRef = useRef(null);
+  const callBackFunc = (entries) => {
+    const [entry] = entries;
+
+    if (entry.isIntersecting) {
+      if (classAbout.length === 1) {
+        classAbout.push(classes.AboutInView);
+      }
+    } else {
+      if (classAbout.length === 2) {
+        classAbout.pop();
+      }
+    }
+
+    setView(entry.isIntersecting);
+  };
+  useEffect(() => {
+    const observer = new IntersectionObserver(callBackFunc, options);
+
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
+    }
+    const currentRef = aboutRef.current;
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [options, aboutRef]);
 
   return (
-    <section id="about" className={view ? classAbout.join(" ") : classAbout}>
+    <section id="about" ref={aboutRef} className={classAbout.join(" ")}>
       <div className={classes.container}>
         <h1 className={classes.Title}>
           About <span style={{ color: "#01b0d3" }}>Me</span>

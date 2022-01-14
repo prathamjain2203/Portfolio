@@ -1,5 +1,5 @@
 import classes from "./Projects.module.css";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import Project from "./Project/Project";
 const classProjects = [classes.Projects];
 
@@ -54,26 +54,48 @@ const projectsArr = [
 
 function Projects() {
   const [view, setView] = useState(false);
-  const handleScroll = useCallback(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 1200) {
-        if (classProjects.length === 1) {
-          classProjects.push(classes.ProjectsInView);
-          setView(true);
-        }
-      }
-    });
-  }, []);
-  useEffect(() => {
-    handleScroll();
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
+
+  const options = useMemo(() => {
+    return {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.2,
     };
-  }, [handleScroll]);
+  }, []);
+  const containerRef = useRef(null);
+  const callBackFunc = (entries) => {
+    const [entry] = entries;
+
+    if (entry.isIntersecting) {
+      if (classProjects.length === 1) {
+        classProjects.push(classes.ProjectsInView);
+      }
+    } else {
+      if (classProjects.length === 2) {
+        classProjects.pop();
+      }
+    }
+
+    setView(entry.isIntersecting);
+  };
+  useEffect(() => {
+    const observer = new IntersectionObserver(callBackFunc, options);
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+    const currentRef = containerRef.current;
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [options, containerRef]);
   return (
     <section
+      ref={containerRef}
       id="projects"
-      className={view ? classProjects.join(" ") : classProjects}
+      className={classProjects.join(" ")}
     >
       <h1 className={classes.Title}>Projects</h1>
       <div className={classes.ProjectsList}>
