@@ -95,7 +95,7 @@ function Projects() {
     <section
       ref={containerRef}
       id="projects"
-      className={classProjects.join(" ")}
+      className={view ? classProjects.join(" ") : classProjects}
     >
       <h1 className={classes.Title}>Projects</h1>
       <div className={classes.ProjectsList}>

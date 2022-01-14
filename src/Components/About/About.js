@@ -45,7 +45,11 @@ function About() {
   }, [options, aboutRef]);
 
   return (
-    <section id="about" ref={aboutRef} className={classAbout.join(" ")}>
+    <section
+      id="about"
+      ref={aboutRef}
+      className={view ? classAbout.join(" ") : classAbout}
+    >
       <div className={classes.container}>
         <h1 className={classes.Title}>
           About <span style={{ color: "#01b0d3" }}>Me</span>

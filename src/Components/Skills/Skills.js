@@ -51,7 +51,11 @@ function Skills() {
     };
   }, [options, containerRef]);
   return (
-    <section id="skills" ref={containerRef} className={classSkills.join(" ")}>
+    <section
+      id="skills"
+      ref={containerRef}
+      className={view ? classSkills.join(" ") : classSkills}
+    >
       <div className={classes.Container}>
         <h1 className={classes.Title}>
           TECHNICAL <span style={{ color: "#01b0d3" }}>SKILLS</span>
