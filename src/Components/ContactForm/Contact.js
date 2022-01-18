@@ -33,16 +33,6 @@ function Contact(props) {
   };
   const form = (
     <div style={{ position: "relative" }}>
-      <h1
-        style={{
-          color: "black",
-          fontSize: "2rem",
-          marginLeft: "60px",
-          marginTop: "30px",
-        }}
-      >
-        CONTACT
-      </h1>
       <img
         onClick={() => props.setViewContactForm(false)}
         className={classes.Close}
@@ -51,6 +41,16 @@ function Contact(props) {
       />
       <form onSubmit={onSubmit} className={classes.Form}>
         <div style={{ display: "flex", gap: "10px", flexDirection: "column" }}>
+          <h1
+            style={{
+              color: "black",
+              fontSize: "2rem",
+
+              marginTop: "10px",
+            }}
+          >
+            CONTACT
+          </h1>
           <label className={classes.Label} htmlFor="name">
             Name
           </label>

@@ -1,5 +1,6 @@
 .Contact {
   width: 75%;
+  max-width: 500px;
   color: #242333;
   height: 450px;
   z-index: 2;
