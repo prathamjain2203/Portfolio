@@ -1,5 +1,6 @@
 import "./App.css";
 import About from "./Components/About/About";
+import Experience from "./Components/Experience/Experience";
 import Footer from "./Components/Footer/Footer";
 import Home from "./Components/Home/Home";
 import Mobilenav from "./Components/MobileNav/MobileNav";
@@ -14,6 +15,7 @@ function App() {
       <Mobilenav />
       <Home />
       <About />
+      <Experience />
       <Skills />
       <Projects />
       <Footer />

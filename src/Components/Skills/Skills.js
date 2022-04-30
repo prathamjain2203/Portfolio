@@ -10,6 +10,11 @@ const skillArr = [
   { title: "REACT.JS", src: "../../../SkillsLogo/React.png" },
   { title: "REDUX", src: "../../../SkillsLogo/Redux.png" },
   { title: "REACT-ROUTER", src: "../../../SkillsLogo/React-router.png" },
+  {
+    title: "STYLED-COMPONENTS",
+    src: "../../../SkillsLogo/StyledComponents.png",
+  },
+  { title: "TYPESCRIPT", src: "../../../SkillsLogo/typescript.png" },
 ];
 function Skills() {
   const [view, setView] = useState(false);

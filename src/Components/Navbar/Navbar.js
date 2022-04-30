@@ -20,6 +20,7 @@ function Navbar() {
         <ul onClick={(e) => handleClick(e)} className={classes.Navbarritems}>
           <li data-section="home">HOME</li>
           <li data-section="about">ABOUT</li>
+          <li data-section="experience">EXPERIENCE</li>
           <li data-section="skills">SKILLS</li>
           <li data-section="projects">PROJECTS</li>
         </ul>
